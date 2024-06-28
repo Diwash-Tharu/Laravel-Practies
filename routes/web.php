@@ -32,3 +32,9 @@ Route::get('/about/{name}', function ($name) {
     echo $name;
     return view('about');
 });	    
+
+// at first it will show than then the submit button is pressed thant 
+//tha form will be shown as shown in the figure of the code 
+
+Route::view('/userform', 'user-form');
+Route ::Post('adduser',[userContoller::class,'userForm']);
