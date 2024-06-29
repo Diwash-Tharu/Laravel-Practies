@@ -34,9 +34,16 @@ class UserContoller extends Controller
         // for makin the validaion of the form on the form 
         $req->validate([
             'name'=>'required | max:10',
-            // 'email'=>'required ',
-            'lastName'=>'required',
-        ]);
+            'email'=>'required ',
+            'lastName'=>'required | UpperCase',
+        ],
+        [
+            'name.required'=>'Name is required',
+            'name.max'=>'Name should be less than 10 characters',
+            'lastName.required'=>'Last Name is required',
+            
+        ]
+    );
 
          return $req;
         // return $req->input();
@@ -44,5 +51,29 @@ class UserContoller extends Controller
 //     {
 //         echo "function is called";
 //         //return view('user-form');
+
+
      }
+    function showName()
+    {
+        // return redirect()->route('tharu');
+        return to_route('tharu');
+    }
+
+    function showAnu()
+    {
+        return to_route('anu',['name' => 'diwash']);
+    }
+
+    // for grup prefix 
+    function shows() {
+        return "diwahs show";
+    }
+
+    function add()  
+    {
+        return "diwash add";
+        // return view('add');
+    }
+
 }

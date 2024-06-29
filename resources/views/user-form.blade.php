@@ -13,10 +13,11 @@
         @csrf
         <div class="input-wrapper">
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name" placeholder="name">
+            <input type="text" name="name" id="name" placeholder="name" value = "{{old('name')}}">
             <span style="color:red">@error('name'){{$message}}@enderror </br></span>
             <label for="name">last Name:</label>
             <input type="text" name="lastName" id="lname" placeholder="Last Name">
+            <span style="color:red">@error('lastName'){{$message}}@enderror </br></span>
             <label for="name">Email:</label>
             <input type="text" name="email" id="email" placeholder="Email">
             <button type="submit">Submit</button>

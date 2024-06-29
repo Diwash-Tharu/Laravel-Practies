@@ -8,6 +8,8 @@
 <a href="/">welcome page</a>
 <a href="/about/diwash">about page</a>
 
+<a href="{{URL::to('diwash',['diwash'])}}">about diwash</a>
+
 <style>
     h1
         {
