@@ -100,3 +100,9 @@ Route ::middleware(['check1'])->group(function()
 
 // for the individual middleware of the code
 Route::view('middle-wares-two','milldle-ware-checkGroup')->middleware(AgeCheck::class);
+
+
+
+// now connecting the data base 
+
+Route::get('index', [userContoller::class,'index']);

@@ -76,4 +76,10 @@ class UserContoller extends Controller
         // return view('add');
     }
 
+    function index(){
+
+        echo "index function is called";
+        return "index";
+    }
+
 }
