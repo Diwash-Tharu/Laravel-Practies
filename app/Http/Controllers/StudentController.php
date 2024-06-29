@@ -24,4 +24,9 @@ class StudentController extends Controller
 
             return "name of the student is".$name;
      }
+     function getStudent(){
+        $student =\App\Models\Student::all();
+        return "diwash";
+        //    return view('student');
+     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserContoller extends Controller
 {
@@ -78,8 +79,9 @@ class UserContoller extends Controller
 
     function index(){
 
-        echo "index function is called";
-        return "index";
+        // echo "index function is called";
+        $user= DB::select('select * from users');
+        return view('user',['diwash'=>$user]);
     }
 
 }
